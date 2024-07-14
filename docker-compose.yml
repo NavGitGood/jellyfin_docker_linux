@@ -1,0 +1,19 @@
+version: "1.0"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    container_name: homelab
+    # network_mode is not required if ports are set explicitly
+    # network_mode: 'host'
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Amsterdam
+    volumes:
+      - ./jellyfin-config:/config
+      - ./media_local:/media
+    ports:
+      - 8096:8096
+    restart: unless-stopped
+volumes:
+  jellyfin-config:
