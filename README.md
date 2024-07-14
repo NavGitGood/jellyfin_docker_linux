@@ -22,5 +22,4 @@ setup instructions for jellyfin docker
 - as volume is used for jellyfin configuration, it is persistent and retained even after stopping the container
 
 # troubleshooting
-- if docker server is not accessible from host machine `localhost:8096`, run `docker ps` and check if port `8096` is mentioned, if it is not, then port is not accessible (you can also run `netstat -tulpn
-` to check if port is being used for something else)
+- if docker server is not accessible from host machine `localhost:8096`, run `docker ps` and check if port `8096` is mentioned, if it is not, then port is not accessible (you can also run `netstat -tulpn` to check if port is being used for something else)
